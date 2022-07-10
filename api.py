@@ -7,5 +7,5 @@ def callCryptoAPI(key, cryptoIDs = '1', baseCurrency = "EUR"):
     return request.json();
 
 def callForexAPI(key, baseCurrency = "EUR"):
-    request = requests.get("https://v6.exchangerate-api.com/v6/" + key + "/latest/" + baseCurrency);
+    request = requests.get(f"https://v6.exchangerate-api.com/v6/{key}/latest/{baseCurrency}");
     return request.json();

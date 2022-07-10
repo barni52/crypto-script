@@ -2,10 +2,7 @@ class Cryptocurrency:
     def __init__(self, id, symbol):
         self.id = id;
         self.symbol = symbol;
-        self.amount = 0;
-        self.cost = 0;
-        self.currentValue = 0;
-        self.netProfit = 0;
+        self.amount = self.cost = self.currentValue = self.netProfit = self.netProfitPercent = 0;
 
     def sumPurchases(self, purchasesData):
         for line in purchasesData:
@@ -28,3 +25,4 @@ class Cryptocurrency:
         self.updateData(cryptoData, baseCurrency);
         self.currentValue = self.amount * self.price;
         self.netProfit = self.currentValue - self.cost;
+        self.netProfitPercent = self.netProfit / self.cost * 100;
