@@ -24,7 +24,7 @@ class Cryptocurrency:
 
     def updateProperties(self, cryptoData, purchasesData):
         self.sumPurchases(purchasesData);
-        self.updateData(cryptoData, baseCurrency);
+        self.updateData(cryptoData);
         self.currentValue = self.amount * self.price;
         self.netProfit = self.currentValue - self.cost;
         self.netProfitPercent = self.netProfit / self.cost * 100;
